@@ -1,8 +1,7 @@
-import SignUp from '@/components/SignUp'
-import { getServerSession } from 'next-auth'
-import { redirect } from 'next/navigation'
+import Login from '@/components/Login'
 import React from 'react'
-
+import { getServerSession } from "next-auth";
+import { redirect, useRouter } from 'next/navigation';
 
 const Page = async() => {
   const session=await getServerSession()
@@ -11,7 +10,7 @@ const Page = async() => {
   }
   return (
     <>
-    <SignUp/>
+    <Login/>
     </>
   )
 }
